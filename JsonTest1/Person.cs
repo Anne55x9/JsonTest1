@@ -39,5 +39,10 @@ namespace JsonTest1
 
         }
 
+        public override string ToString()
+        {
+            return $"{this.name} {this.tlf} {this.email}";
+        }
+
     }
 }
