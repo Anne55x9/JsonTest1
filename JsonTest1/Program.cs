@@ -46,6 +46,26 @@ namespace JsonTest1
                 Console.WriteLine(person.ToString());
             }
 
+
+            Console.WriteLine("Det fejler");
+
+            //1 property
+            Person person3 = new Person();
+            person3.Name = "Sofie";
+            person3.Tlf = 35363637;
+            person3.Email = "sofie@yahoo.com";
+
+            string Person3JsonText = JsonConvert.SerializeObject(person3);
+
+
+            Console.WriteLine($"{person3.ToString()}");
+
+            PersonMini personmini = new PersonMini();
+
+            personmini = JsonConvert.DeserializeObject<PersonMini>(Person3JsonText);
+
+            Console.WriteLine("Personmine er:" + personmini.ToString());
+
             Console.ReadLine();
 
         }
